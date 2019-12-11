@@ -1,6 +1,6 @@
 [package]
 name = "mail_slot"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Robert Masen <r.f.masen@gmail.com>"]
 edition = "2018"
 description = "A Rust implementation of the Windows Mailslot API"
@@ -10,4 +10,4 @@ keywords = ["ipc", "windows", "mailslot"]
 categories = ["os::windows-apis"]
 
 [dependencies]
-winapi = { version = "0.3.8", features = ["everything"] }
+winapi = { version = "0.3.8", features = ["handleapi", "winbase", "winnt"] }
