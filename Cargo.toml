@@ -1,0 +1,12 @@
+[package]
+name = "mail_slot"
+version = "0.1.0"
+authors = ["Robert Masen <r.f.masen@gmail.com>"]
+edition = "2018"
+description = "Rust wrapper over the Windows Mailslot API"
+license = "MIT"
+repository = "https://github.com/FreeMasen/mail_slot"
+
+
+[dependencies]
+winapi = { version = "0.3.8", features = ["everything"] }
