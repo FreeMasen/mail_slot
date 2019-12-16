@@ -7,9 +7,9 @@ pub fn main() {
     let mut client = MailslotClient::new(&name).unwrap();
     for i in 0..10 {
         client.send_message(i.to_string().as_bytes()).unwrap();
-    }
-    while let Some(msg) = server.get_next_unread().unwrap() {
-        let msg_str = String::from_utf8(msg).unwrap();
-        println!("message from client {}", msg_str);
+        while let Some(msg) = server.get_next_unread().unwrap() {
+            let msg_str = String::from_utf8(msg).unwrap();
+            println!("message from client {}", msg_str);
+        }
     }
 }

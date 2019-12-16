@@ -8,7 +8,7 @@ pub struct MailslotClient {
     has_domain: bool,
 }
 
-use crate::{Error, MailslotName};
+use super::{Error, MailslotName};
 
 impl MailslotClient {
     pub fn new(name: &MailslotName) -> Result<Self, Error> {
