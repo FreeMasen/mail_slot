@@ -3,7 +3,7 @@ use core::task::Context;
 use crate::Error;
 use mach::{
     bootstrap::{bootstrap_register, bootstrap_port},
-    port::{mach_port_t, MACH_PORT_RIGHT_RECEIVE, MACH_PORT_NULL},
+    port::{mach_port_t, MACH_PORT_RIGHT_RECEIVE, MACH_PORT_NULL, MACH_MSG_TIMED_OUT},
     kern_return::KERN_SUCCESS,
     mach_port::mach_port_allocate,
     traps::mach_task_self,
@@ -15,8 +15,6 @@ use mach::{
         mach_msg,
     },
 };
-
-const MACH_MSG_TIMED_OUT: i32 = 268_451_843;
 
 pub struct MailslotServer {
     port: mach_port_t,
