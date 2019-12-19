@@ -1,5 +1,5 @@
 
-use crate::{to_win_string, Error, MailslotName};
+use crate::{windows::to_win_string, Error, MailslotName};
 use std::{
     fs::File,
     io::Read,
