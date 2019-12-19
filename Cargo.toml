@@ -17,6 +17,3 @@ winapi = { version = "0.3.8", features = ["handleapi", "winbase", "winnt"] }
 
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
-
-[dev-dependencies]
-tokio = { version = "0.2.0", features = ["full"] }
